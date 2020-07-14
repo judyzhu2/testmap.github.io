@@ -1,0 +1,2019 @@
+<!doctype html>
+<html class="no-js"  lang="en">
+
+	<head>
+		<!-- META DATA -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet" />
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+
+		<!-- TITLE OF SITE -->
+		<title>TestMap</title>
+
+		<!-- favicon img -->
+		<link rel="shortcut icon" type="image/icon" href="assets/pics/logot.png"/>
+
+		<!--font-awesome.min.css-->
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--animate.css-->
+		<link rel="stylesheet" href="assets/css/animate.css" />
+
+		<!--hover.css-->
+		<link rel="stylesheet" href="assets/css/hover-min.css">
+
+		<!--datepicker.css-->
+		<link rel="stylesheet"  href="assets/css/datepicker.css" >
+
+		<!--owl.carousel.css-->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
+
+		<!-- range css-->
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+
+		<!--bootstrap.min.css-->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="assets/css/bootsnav.css"/>
+
+		<!--style.css-->
+		<link rel="stylesheet" href="assets/css/style.css" />
+
+		<!--responsive.css-->
+		<link rel="stylesheet" href="assets/css/responsive.css" />
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<style>
+    #map{
+      height:800px;
+      width:100%;
+    }
+  </style>
+	<div id="map"></div>
+  <script>
+    function initMap(){
+      // Map Settings
+      var options = {
+        zoom:12,
+        center:{lat:30.2672,lng:-97.7431},
+        panControl: true,
+        zoomControl: true,
+        mapTypeControl: false,
+        scaleControl: true,
+        streetViewControl: false,
+        overviewMapControl: true,
+        rotateControl: true,
+        styles:[
+          {
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#f5f5f5"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#f5f5f5"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#bdbdbd"
+              }
+            ]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+                "color": "#d8def3"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#c8caea"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#ffffff"
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#afb1de"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "transit.line",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#8092db"
+              }
+            ]
+          },
+          {
+            "featureType": "transit.station",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#a9b1da"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#adb7e1"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          }
+        ]
+      }
+      // New Map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // icons
+      var zeroMarker = {
+        url:'https://i.imgur.com/aRJGWIV.png',
+        scaledSize: new google.maps.Size(30,40),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(15, 40
+      )
+      }
+
+      // Add Marker
+      // var marker = new google.maps.Marker({
+      //   position:{lat:29.4241,lng:-98.4936},
+      //   map:map,
+      //   icon:covid
+      // });
+      //
+      // //infoWindows
+      // var infoWindow =  new google.maps.InfoWindow({
+      //   content:'<h1>Testing Center 1</h1>'
+      // });
+      //
+      // marker.addListener('click',function(){
+      //   infoWindow.open(map, marker);
+      // });
+
+      //Marker Array
+			var markers = [
+        {
+          coords:{lat:30.341720,lng:-97.967400},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">FastMed Urgent Care</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>FastMed Urgent Care</b> is located at <b>2303 Ranch Rd 620 S #210, Lakeway, TX 78734 </b></p>" +
+            "<p>No appt. No referral, testing for all</p>" +
+            '<p>Website: <a href="https://www.fastmed.com/urgent-care-centers/lakeway-tx-walk-in-clinic/"target="_blank">' +
+            "https://www.fastmed.com/urgent-care-centers/lakeway-tx-walk-in-clinic/</a> </p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.226410,lng:-97.891457},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Ascension Seton Southwest</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Ascension Seton Southwest</b> is located at <b>7900 Farm to Market Rd 1826, Austin, TX 78737 </b></p>" +
+						"<p>No appt. Referral, limited testing</p>" +
+            '<p>Website: <a href="https://healthcare.ascension.org/Locations/Texas/TXAUS/Austin-Ascension-Seton-Southwest"target="_blank">' +
+            "https://healthcare.ascension.org/Locations/Texas/TXAUS/Austin-Ascension-Seton-Southwest</a> </p>" +
+            "</div>" +
+            "</div>"
+        },
+				{
+          coords:{lat:30.228270,lng:-97.862980},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">NextCare Urgent Care</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>NextCare Urgent Care</b> is located at <b>6001 W William Cannon Dr #302, Austin, TX 78749 </b></p>" +
+            "<p>No appt. No referral, testing for all</p>" +
+            '<p>Website: <a href="https://nextcare.com/locations/tx/austin-william-cannon/"target="_blank">' +
+            "https://nextcare.com/locations/tx/austin-william-cannon/</a> </p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.322380,lng:-97.699890},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Baylor Scott & White Medical Center</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Baylor Scott & White Medical Center</b> is located at <b>5245 W US Hwy 290 Service Rd, Austin, TX 78735 </b></p>" +
+            "<p>Appt. required, Referral, Testing for all, drive through </p>" +
+            '<p>Website: <a href="https://my.bswhealth.com"target="_blank">' +
+            "https://my.bswhealth.com</a> (Requires an account)</p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.233497,lng:-97.824390},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">CareNow Urgent Care</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>CareNow Urgent Care</b> is located at <b>5033 US-290, Austin, TX 78746 </b></p>" +
+            "<p>No appt, no referral, testing for all  </p>" +
+            '<p>Website: <a href="https://CareNow.com"target="_blank">' +
+            "https://CareNow.com</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.281677,lng:-97.775086},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">MinuteClinic (CVS)</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>MinuteClinic (CVS)</b> is located at <b>2610 Lake Austin Blvd, Austin, TX 78703 </b></p>" +
+            "<p>Appt. required, no referral, tests limited, Drive-through</p> <p>Requirements: 18yrs or older, legally reside in-state</p>" +
+            '<p>Website: <a href="https://www.cvs.com/minuteclinic/clinic-locator/tx/austin/6964.html"target="_blank">' +
+            "https://www.cvs.com/minuteclinic/clinic-locator/tx/austin/6964.html</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.500060,lng:-97.777228},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Urgent And Family Care Avery Ranch</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Urgent And Family Care Avery Ranch</b> is located at <b>10625 Parmer Lane Suite D 400 Austin Texas 78717 </b></p>" +
+            "<p>Appointment required, Testing for all,referral required</p> <p>Check-in using Telemed forms on website</p>" +
+            '<p>Website: <a href="https://austinurgentcare.com/"target="_blank">' +
+            "https://austinurgentcare.com/</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.229612,lng:-97.808863},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Remedy</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Remedy</b> is located at <b>3200 Jones Rd, Austin, TX 72735 </b></p>" +
+            "<p>Appt. required, referral, testing for all, drive-through</p> <p>Online screening: Video visit with provider to determine what to do and if to get tested</p>" +
+            '<p>Website: <a href="https://myremedy.com/"target="_blank">' +
+            "https://myremedy.com/</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.301999,lng:-97.744712},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Fastmed Urgent Care</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Fastmed Urgent Care</b> is located at <b>3311 N Lamar Blvd, Austin, TX 78705 </b></p>" +
+            "<p>Appointment not required, Referral not required, testing for all patients, recommended to check in online and complete e-registration</p>" +
+            '<p>Website: <a href="https://www.fastmed.com/urgent-care-centers/austin-tx-walk-in-clinic-lamar-boulevard/"target="_blank">' +
+            "https://www.fastmed.com/urgent-care-centers/austin-tx-walk-in-clinic-lamar-boulevard/</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.171178,lng:-97.823623},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Austin Regional Clinic: ARC Southwest</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Austin Regional Clinic: ARC Southwest</b> is located at <b>1807 W Slaughter Ln Suite 490, Austin, TX 78748 </b></p>" +
+            "<p>Appointment Necessary, Must see provider before testing, Costs $201, Insurance not required</p> <p>Drive Through: Monday through Friday 5PM-7PM, Saturday and Sunday 8AM to 5PM</p>" +
+            '<p>Website: <a href="https://mychart.austinregionalclinic.com/mychart/openscheduling"target="_blank">' +
+            "https://mychart.austinregionalclinic.com/mychart/openscheduling</a></p><p>Phone Number: <a href='tel:866453452'>866-453-452</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.187574,lng:-97.741932},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Southeast Branch Library</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Southeast Branch Library</b> is located at <b>5803 Nuckols Crossing, Austin, TX, 78744 </b></p>" +
+            "<p>Walk-On, No appointment necessary, free</p> " +
+            '<p>Website: <a href="https://www.austintexas.gov/covid19"target="_blank">' +
+            "https://www.austintexas.gov/covid19</a></p><p>Phone Number: <a href='tel:5129742000'>512-974-2000</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.227328,lng:-97.769560},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Austin Regional Clinic: ARC South 1st</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Austin Regional Clinic: ARC South 1st</b> is located at <b>3828 S 1st St, Austin, TX 78704 </b></p>" +
+            "<p>Appointment Necessary, </p> " +
+            '<p>UPDATE Website: <a href="https://www.austintexas.gov/covid19"target="_blank">' +
+            "https://www.austintexas.gov/covid19</a></p><p>Phone Number: <a href='tel:5129742000'>512-974-2000</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+      ];
+      var markerArray = []
+      var infoWindowArray = []
+      //Loop through markers
+      for(let i = 0;i < markers.length;i++){
+        addMarker(markers[i]);
+      }
+
+      // addMarker({
+      //   coords:{lat:29.4241,lng:-98.4936},
+      //   iconImage:covid,
+      //   content:'<h1>San Antonio</h1>'
+      // });
+      // addMarker({
+      //   coords:{lat:30.224630,lng:-97.785000},
+      //   iconImage:covid,
+      //   content:'<h1>My House</h1>'
+      // });
+      // Add Marker function
+      // var infoWindowArray = []
+      var locationInfowindow = new google.maps.InfoWindow();
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          icon:props.iconImage
+        });
+
+          var content = props.content;
+
+    google.maps.event.addListener(marker,'click', (function(marker,content){
+      return function() {
+          locationInfowindow.setContent(content);
+          locationInfowindow.open(map,marker);
+      };
+     })(marker,content));
+        }
+
+}
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIF68H7lKuisNpx0eUB-YE9RZIfx3MwPo&callback=initMap">
+    </script>
+	<body>
+		<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+			your browser</a> to improve your experience and security.</p>
+		<![endif]-->
+
+		<!-- main-menu Start -->
+		<header class="top-area">
+			<div class="header-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-2">
+							<div class="logo">
+								<a href="index.html">
+									Test<span>MAP</span>
+								</a>
+							</div><!-- /.logo-->
+						</div><!-- /.col-->
+						<div class="col-sm-10">
+							<div class="main-menu">
+
+								<!-- Brand and toggle get grouped for better mobile display -->
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+										<i class="fa fa-bars"></i>
+									</button><!-- / button-->
+								</div><!-- /.navbar-header-->
+								<div class="collapse navbar-collapse">
+									<ul class="nav navbar-nav navbar-right">
+										<li class="smooth-menu"><a href="#home">Home</a></li>
+										<li class="smooth-menu"><a href="#gallery">Map</a></li>
+										<li class="smooth-menu"><a href="#pack">Schedule </a></li>
+										<li class="smooth-menu"><a href="#spo">Survey</a></li>
+										<li class="smooth-menu"><a href="#blog">Helpful sources</a></li>
+
+
+
+									</ul>
+								</div><!-- /.navbar-collapse -->
+							</div><!-- /.main-menu-->
+						</div><!-- /.col-->
+					</div><!-- /.row -->
+					<div class="home-border"></div><!-- /.home-border-->
+				</div><!-- /.container-->
+			</div><!-- /.header-area -->
+
+		</header><!-- /.top-area-->
+		<!-- main-menu End -->
+
+
+		<!--about-us start -->
+		<section id="home" class="about-us">
+			<div class="container">
+				<div class="about-us-content">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="single-about-us">
+								<div class="about-us-txt">
+									<h2>
+										SAVE THE EARTH
+
+									</h2>
+									<div class="about-btn">
+										<button  class="about-view">
+											<li class="smooth-menu"><a href="#search">More Info</a></li>
+										</button>
+									</div><!--/.about-btn-->
+								</div><!--/.about-us-txt-->
+							</div><!--/.single-about-us-->
+						</div><!--/.col-->
+						<div class="col-sm-0">
+							<div class="single-about-us">
+
+							</div><!--/.single-about-us-->
+						</div><!--/.col-->
+					</div><!--/.row-->
+				</div><!--/.about-us-content-->
+			</div><!--/.container-->
+
+		</section><!--/.about-us-->
+		<!--about-us end -->
+
+		<!--travel-box start-->
+		<section id="search" class="travel-box">
+
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-md-12">
+        				<div class="single-travel-boxes">
+        					<div id="desc-tabs" class="desc-tabs">
+
+								<ul class="nav nav-tabs" role="tablist">
+
+
+
+									<li role="presentation">
+										<a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">
+											<i class="fa fa-building"></i>
+											Location Search
+										</a>
+									</li>
+
+
+								</ul>
+
+								<!-- Tab panes -->
+								<div class="tab-content">
+
+									<div role="tabpanel" class="tab-pane active fade in" id="tours">
+										<div class="tab-para">
+
+											<div class="row">
+												<div class="col-lg-4 col-md-4 col-sm-12">
+													<div class="single-tab-select-box">
+
+														<h2>destination</h2>
+
+														<div class="travel-select-icon">
+															<select class="form-control ">
+
+															  	<option value="default">Select your County</option><!-- /.option-->
+
+															  	<option value="turkey">Bastrop</option><!-- /.option-->
+
+															  	<option value="russia">Caldwell</option><!-- /.option-->
+															  	<option value="egept">Hays</option><!-- /.option-->
+																	<option value="egept">Travis</option>
+																	<option value="egept">Williamson</option>
+
+															</select><!-- /.select-->
+														</div><!-- /.travel-select-icon -->
+
+														<!--<div class="travel-select-icon">-->
+															<!--<select class="form-control ">
+
+															  	<option value="default">enter your destination location</option>
+
+															  	<option value="istambul">istambul</option>
+
+															  	<option value="mosko">mosko</option>
+															  	<option value="cairo">cairo</option>
+
+															</select>
+														</div>-->
+
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+												<div class="col-lg-2 col-md-3 col-sm-4">
+													<div class="single-tab-select-box">
+														<h2>Date</h2>
+														<div class="travel-check-icon">
+															<form action="#">
+																<input type="text" name="check_in" class="form-control" data-toggle="datepicker" >
+															</form>
+														</div><!-- /.travel-check-icon -->
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+
+
+												<div class="col-lg-2 col-md-3 col-sm-4">
+													<div class="single-tab-select-box">
+														<h2>providers</h2>
+														<div class="travel-select-icon">
+															<select class="form-control ">
+
+															  	<option value="default">private</option><!-- /.option-->
+
+															  	<option value="10">government</option><!-- /.option-->
+
+
+															</select><!-- /.select-->
+														</div><!-- /.travel-select-icon -->
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+
+											</div><!--/.row-->
+
+											<div class="row">
+												<div class="col-sm-5">
+													<div class="travel-budget">
+														<div class="row">
+
+															<div class="co-md-9 col-sm-8">
+																<div class="travel-filter">
+																	<div class="info_widget">
+
+																	</div><!--/.info_widget-->
+																</div><!--/.travel-filter-->
+															</div><!--/.col-->
+														</div><!--/.row-->
+													</div><!--/.travel-budget-->
+												</div><!--/.col-->
+												<div class="clo-sm-7">
+													<div class="about-btn travel-mrt-0 pull-right">
+														<button  class="about-view travel-btn">
+															search
+														</button><!--/.travel-btn-->
+													</div><!--/.about-btn-->
+												</div><!--/.col-->
+
+											</div><!--/.row-->
+
+										</div><!--/.tab-para-->
+
+									</div><!--/.tabpannel-->
+
+									<div role="tabpanel" class="tab-pane fade in" id="hotels">
+										<div class="tab-para">
+
+											<div class="row">
+												<div class="col-lg-4 col-md-4 col-sm-12">
+													<div class="single-tab-select-box">
+
+
+
+														<div class="travel-select-icon">
+															<select class="form-control ">
+
+															  	<option value="default">enter your destination country</option><!-- /.option-->
+
+															  	<option value="turkey">turkey</option><!-- /.option-->
+
+															  	<option value="russia">russia</option><!-- /.option-->
+															  	<option value="egept">egypt</option><!-- /.option-->
+
+															</select><!-- /.select-->
+														</div><!-- /.travel-select-icon -->
+
+														<div class="travel-select-icon">
+															<select class="form-control ">
+
+															  	<option value="default">enter your destination location</option><!-- /.option-->
+
+															  	<option value="istambul">istambul</option><!-- /.option-->
+
+															  	<option value="mosko">mosko</option><!-- /.option-->
+															  	<option value="cairo">cairo</option><!-- /.option-->
+
+															</select><!-- /.select-->
+														</div><!-- /.travel-select-icon -->
+
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+												<div class="col-lg-2 col-md-3 col-sm-4">
+													<div class="single-tab-select-box">
+														<h2>check in</h2>
+														<div class="travel-check-icon">
+															<form action="#">
+																<input type="text" name="check_in" class="form-control" data-toggle="datepicker" placeholder="12 -01 - 2017 ">
+															</form>
+														</div><!-- /.travel-check-icon -->
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+												<div class="col-lg-2 col-md-3 col-sm-4">
+													<div class="single-tab-select-box">
+														<h2>check out</h2>
+														<div class="travel-check-icon">
+															<form action="#">
+																<input type="text" name="check_out" class="form-control"  data-toggle="datepicker" placeholder="22 -01 - 2017 ">
+															</form>
+														</div><!-- /.travel-check-icon -->
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+												<div class="col-lg-2 col-md-1 col-sm-4">
+													<div class="single-tab-select-box">
+														<h2>duration</h2>
+														<div class="travel-select-icon">
+															<select class="form-control ">
+
+															  	<option value="default">5</option><!-- /.option-->
+
+															  	<option value="10">10</option><!-- /.option-->
+
+															  	<option value="15">15</option><!-- /.option-->
+															  	<option value="20">20</option><!-- /.option-->
+
+															</select><!-- /.select-->
+														</div><!-- /.travel-select-icon -->
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+												<div class="col-lg-2 col-md-1 col-sm-4">
+													<div class="single-tab-select-box">
+														<h2>members</h2>
+														<div class="travel-select-icon">
+															<select class="form-control ">
+
+															  	<option value="default">1</option><!-- /.option-->
+
+															  	<option value="2">2</option><!-- /.option-->
+
+															  	<option value="4">4</option><!-- /.option-->
+															  	<option value="8">8</option><!-- /.option-->
+
+															</select><!-- /.select-->
+														</div><!-- /.travel-select-icon -->
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+											</div><!--/.row-->
+
+											<div class="row">
+												<div class="col-sm-5"></div><!--/.col-->
+												<div class="clo-sm-7">
+													<div class="about-btn travel-mrt-0 pull-right">
+														<button  class="about-view travel-btn">
+															search
+														</button><!--/.travel-btn-->
+													</div><!--/.about-btn-->
+												</div><!--/.col-->
+
+											</div><!--/.row-->
+
+										</div><!--/.tab-para-->
+
+									</div><!--/.tabpannel-->
+
+									<div role="tabpanel" class="tab-pane fade in" id="flights">
+										<div class="tab-para">
+											<div class="trip-circle">
+												<div class="single-trip-circle">
+													<input type="radio" id="radio01" name="radio" />
+  													<label for="radio01">
+  														<span class="round-boarder">
+  															<span class="round-boarder1"></span>
+  														</span>round trip
+  													</label>
+												</div><!--/.single-trip-circle-->
+												<div class="single-trip-circle">
+													<input type="radio" id="radio02" name="radio" />
+  													<label for="radio02">
+  														<span class="round-boarder">
+  															<span class="round-boarder1"></span>
+  														</span>on way
+  													</label>
+												</div><!--/.single-trip-circle-->
+											</div><!--/.trip-circle-->
+											<div class="row">
+												<div class="col-lg-4 col-md-4 col-sm-12">
+													<div class="single-tab-select-box">
+
+														<h2>from</h2>
+
+														<div class="travel-select-icon">
+															<select class="form-control ">
+
+															  	<option value="default">enter your location</option><!-- /.option-->
+
+															  	<option value="turkey">turkey</option><!-- /.option-->
+
+															  	<option value="russia">russia</option><!-- /.option-->
+															  	<option value="egept">egypt</option><!-- /.option-->
+
+															</select><!-- /.select-->
+														</div><!-- /.travel-select-icon -->
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+												<div class="col-lg-2 col-md-3 col-sm-4">
+													<div class="single-tab-select-box">
+														<h2>departure</h2>
+														<div class="travel-check-icon">
+															<form action="#">
+																<input type="text" name="departure" class="form-control" data-toggle="datepicker"
+																placeholder="12 -01 - 2017 ">
+															</form>
+														</div><!-- /.travel-check-icon -->
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+												<div class="col-lg-2 col-md-3 col-sm-4">
+													<div class="single-tab-select-box">
+														<h2>return</h2>
+														<div class="travel-check-icon">
+															<form action="#">
+																<input type="text" name="return" class="form-control" data-toggle="datepicker" placeholder="22 -01 - 2017 ">
+															</form>
+														</div><!-- /.travel-check-icon -->
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+												<div class="col-lg-2 col-md-1 col-sm-4">
+													<div class="single-tab-select-box">
+														<h2>adults</h2>
+														<div class="travel-select-icon">
+															<select class="form-control ">
+
+															  	<option value="default">5</option><!-- /.option-->
+
+															  	<option value="10">10</option><!-- /.option-->
+
+															  	<option value="15">15</option><!-- /.option-->
+															  	<option value="20">20</option><!-- /.option-->
+
+															</select><!-- /.select-->
+														</div><!-- /.travel-select-icon -->
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+												<div class="col-lg-2 col-md-1 col-sm-4">
+													<div class="single-tab-select-box">
+														<h2>childs</h2>
+														<div class="travel-select-icon">
+															<select class="form-control ">
+
+															  	<option value="default">1</option><!-- /.option-->
+
+															  	<option value="2">2</option><!-- /.option-->
+
+															  	<option value="4">4</option><!-- /.option-->
+															  	<option value="8">8</option><!-- /.option-->
+
+															</select><!-- /.select-->
+														</div><!-- /.travel-select-icon -->
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+
+											</div><!--/.row-->
+
+											<div class="row">
+												<div class="col-lg-4 col-md-4 col-sm-12">
+													<div class="single-tab-select-box">
+
+														<h2>to</h2>
+
+														<div class="travel-select-icon">
+															<select class="form-control ">
+
+															  	<option value="default">enter your destination location</option><!-- /.option-->
+
+															  	<option value="istambul">istambul</option><!-- /.option-->
+
+															  	<option value="mosko">mosko</option><!-- /.option-->
+															  	<option value="cairo">cairo</option><!-- /.option-->
+
+															</select><!-- /.select-->
+														</div><!-- /.travel-select-icon -->
+
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+												<div class="col-lg-3 col-md-3 col-sm-4">
+													<div class="single-tab-select-box">
+
+														<h2>class</h2>
+														<div class="travel-select-icon">
+															<select class="form-control ">
+
+															  	<option value="default">enter class</option><!-- /.option-->
+
+															  	<option value="A">A</option><!-- /.option-->
+
+															  	<option value="B">B</option><!-- /.option-->
+															  	<option value="C">C</option><!-- /.option-->
+
+															</select><!-- /.select-->
+														</div><!-- /.travel-select-icon -->
+													</div><!--/.single-tab-select-box-->
+												</div><!--/.col-->
+												<div class="clo-sm-5">
+													<div class="about-btn pull-right">
+														<button  class="about-view travel-btn">
+															search
+														</button><!--/.travel-btn-->
+													</div><!--/.about-btn-->
+												</div><!--/.col-->
+
+											</div><!--/.row-->
+
+										</div>
+
+									</div><!--/.tabpannel-->
+
+								</div><!--/.tab content-->
+							</div><!--/.desc-tabs-->
+        				</div><!--/.single-travel-box-->
+        			</div><!--/.col-->
+        		</div><!--/.row-->
+        	</div><!--/.container-->
+
+        </section><!--/.travel-box-->
+		<!--travel-box end-->
+
+        <!--service start-->
+		<section id="service" class="service">
+			<div class="container">
+
+				<div class="service-counter text-center">
+
+					<div class="col-md-4 col-sm-4">
+						<div class="single-service-box">
+							<div class="service-img">
+								<img src="assets/images/service/s1.png" alt="service-icon" />
+							</div><!--/.service-img-->
+							<div class="service-content">
+								<h2>
+									<a href="#">
+									check availability
+									</a>
+								</h2>
+								<p>Coordination with testing centers to see availability</p>
+							</div><!--/.service-content-->
+						</div><!--/.single-service-box-->
+					</div><!--/.col-->
+
+					<div class="col-md-4 col-sm-4">
+						<div class="single-service-box">
+							<div class="service-img">
+								<img src="assets/images/service/s2.png" alt="service-icon" />
+							</div><!--/.service-img-->
+							<div class="service-content">
+								<h2>
+									<a href="#">
+										Map with locations
+									</a>
+								</h2>
+								<p>Map with locations of centers and information about each one.</p>
+							</div><!--/.service-content-->
+						</div><!--/.single-service-box-->
+					</div><!--/.col-->
+
+					<div class="col-md-4 col-sm-4">
+						<div class="single-service-box">
+							<div class="statistics-img">
+								<img src="assets/logo/send-icon.png" alt="service-icon" />
+							</div><!--/.service-img-->
+							<div class="service-content">
+
+								<h2>
+									<a href="#">
+										Find the perfect time
+									</a>
+								</h2>
+								<p>See when centers are open, and if they have walk-in hours.</p>
+							</div><!--/.service-content-->
+						</div><!--/.single-service-box-->
+					</div><!--/.col-->
+
+				</div><!--/.statistics-counter-->
+			</div><!--/.container-->
+
+		</section><!--/.service-->
+		<!--service end-->
+
+		<!--galley start-->
+		<section id="gallery" class="gallery">
+			<div class="container">
+				<div class="gallery-details">
+					<div class="gallary-header text-center">
+						<h2>
+							Map
+						</h2>
+						<p>
+						Find the best option for you
+						</p>
+					</div><!--/.gallery-header-->
+					<!--<div class="gallery-box">
+						<div class="gallery-content">
+						  	<div class="filtr-container">
+						  		<div class="row">
+
+						  			<div class="col-md-6">
+						  				<div class="filtr-item">
+											<img src="assets/images/gallary/g1.jpg" alt="portfolio image"/>
+											<div class="item-title">
+												<a href="#">
+											Austin Public Health
+												</a>
+												<p><span>20 tours</span><span>15 places</span></p>
+											</div>
+										</div>
+						  			</div>
+
+						  			<div class="col-md-6">
+						  				<div class="filtr-item">
+											<img src="assets/images/gallary/g2.jpg" alt="portfolio image"/>
+											<div class="item-title">
+												<a href="#">
+													Balyor Scott & White
+												</a>
+												<p>Appointment required</p>
+
+											</div>
+										</div>
+						  			</div>
+
+						  			<div class="col-md-4">
+						  				<div class="filtr-item">
+											<img src="assets/images/gallary/g3.jpg" alt="portfolio image"/>
+											<div class="item-title">
+												<a href="#">
+													FastMed Urgent Care
+												</a>
+												<p><span>25 tours</span><span>10 places</span></p>
+											</div>
+										</div>
+						  			</div>
+
+						  			<div class="col-md-4">
+						  				<div class="filtr-item">
+											<img src="assets/images/gallary/g4.jpg" alt="portfolio image"/>
+											<div class="item-title">
+												<a href="#">
+													Ascension Seton Southwest
+												</a>
+												<p><span>18 tours</span><span>9 places</span></p>
+											</div>
+										</div>
+						  			</div>
+
+						  			<div class="col-md-4">
+						  				<div class="filtr-item">
+											<img src="assets/images/gallary/g5.jpg" alt="portfolio image"/>
+											<div class="item-title">
+												<a href="#">
+													NextCare Urgent Care
+												</a>
+												<p><span>14 tours</span><span>12 places</span></p>
+											</div>
+										</div>
+						  			</div>
+
+						  			<div class="col-md-8">
+						  				<div class="filtr-item">
+											<img src="assets/images/gallary/g6.jpg" alt="portfolio image"/>
+											<div class="item-title">
+												<a href="#">
+													CareNow Urgent Care
+												</a>
+												<p><span>14 tours</span><span>6 places</span></p>
+											</div>
+										</div>
+						  			</div>
+
+						  		</div>
+
+						  	</div>
+						</div>
+					</div>--><!--/.galley-box-->
+				</div><!--/.gallery-details-->
+			</div><!--/.container-->
+
+		</section>
+		<!--/.gallery-->
+		<!--gallery end-->
+
+
+		<!--discount-offer start-->
+		<section class="discount-offer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="dicount-offer-content text-center">
+							<h2>schedule your COVID-19 Test as soon as possible</h2>
+
+							</div><!--/.campaign-timer-->
+
+
+
+						</div><!-- /.dicount-offer-content-->
+					</div><!-- /.col-->
+				</div><!-- /.row-->
+			</div><!-- /.container-->
+
+		</section><!-- /.discount-offer-->
+		<!--discount-offer end-->
+
+		<!--packages start-->
+		<section id="pack" class="packages">
+			<div class="container">
+				<div class="gallary-header text-center">
+					<h2>
+						Schedule
+					</h2>
+					<p>
+						Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.
+					</p>
+				</div><!--/.gallery-header-->
+				<div class="packages-content">
+					<div class="row">
+
+						<div class="col-md-4 col-sm-6">
+							<div class="single-package-item">
+								<img src="assets/pics/fastmed.jpg" alt="fastmed">
+								<div class="single-package-item-txt">
+									<h3>FastMed Urgent Care <span class="pull-right"></span></h3>
+									<div class="packages-para">
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i> No appointment
+											</span>
+											<i class="fa fa-angle-right"></i>  No referral
+										</p>
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i>  testing for all
+											</span>
+											<!--<i class="fa fa-angle-right"></i>  food facilities-->
+										 </p>
+									</div><!--/.packages-para-->
+
+									<div class="about-btn">
+										<a href="../templatemo_513_avalon/index.html">
+										<button  class="about-view packages-btn">
+											More info
+										</button>
+										</a>
+									</div><!--/.about-btn-->
+								</div><!--/.single-package-item-txt-->
+							</div><!--/.single-package-item-->
+
+						</div><!--/.col-->
+
+						<div class="col-md-4 col-sm-6">
+							<div class="single-package-item">
+								<img src="assets/pics/as1.jpg" alt="as1">
+								<div class="single-package-item-txt">
+									<h3>Ascension Seton Southwest <span class="pull-right"></span></h3>
+									<div class="packages-para">
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i> No appointment
+											</span>
+											<i class="fa fa-angle-right"></i>  Referral
+										</p>
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i>  Limited testing
+											</span>
+											<!--<i class="fa fa-angle-right"></i>  food facilities-->
+										 </p>
+									</div><!--/.packages-para-->
+
+									<div class="about-btn">
+										<button  class="about-view packages-btn">
+											More info
+										</button>
+									</div><!--/.about-btn-->
+								</div><!--/.single-package-item-txt-->
+							</div><!--/.single-package-item-->
+
+						</div><!--/.col-->
+
+						<div class="col-md-4 col-sm-6">
+							<div class="single-package-item">
+								<img src="assets/images/packages/p3.jpg" alt="package-place">
+								<div class="single-package-item-txt">
+									<h3>NestCare Urgent Care <span class="pull-right"></span></h3>
+									<div class="packages-para">
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i> No appointment
+											</span>
+											<i class="fa fa-angle-right"></i>  No referral
+										</p>
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i>  testing for all
+											</span>
+											<!--<i class="fa fa-angle-right"></i>  food facilities-->
+										 </p>
+									</div><!--/.packages-para-->
+
+									<div class="about-btn">
+										<button  class="about-view packages-btn">
+											More info
+										</button>
+									</div><!--/.about-btn-->
+								</div><!--/.single-package-item-txt-->
+							</div><!--/.single-package-item-->
+
+						</div><!--/.col-->
+
+						<div class="col-md-4 col-sm-6">
+							<div class="single-package-item">
+								<img src="assets/pics/B&W.jpg" alt="B&W">
+								<div class="single-package-item-txt">
+									<h3>Baylor Scott & White <span class="pull-right"></span></h3>
+									<div class="packages-para">
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i> appt. required
+											</span>
+											<i class="fa fa-angle-right"></i>  referral
+										</p>
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i>  testing for all
+											</span>
+											<i class="fa fa-angle-right"></i>  drive through
+										 </p>
+									</div><!--/.packages-para-->
+
+									<div class="about-btn">
+										<button  class="about-view packages-btn">
+											More info
+										</button>
+									</div><!--/.about-btn-->
+								</div><!--/.single-package-item-txt-->
+							</div><!--/.single-package-item-->
+
+						</div><!--/.col-->
+
+						<div class="col-md-4 col-sm-6">
+							<div class="single-package-item">
+									<img src="assets/images/packages/p6.jpg" alt="package-place">
+								<div class="single-package-item-txt">
+									<h3>CareNow-Southwest Austin <span class="pull-right"></span></h3>
+									<div class="packages-para">
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i> No appointment
+											</span>
+											<i class="fa fa-angle-right"></i>  no referral
+										</p>
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i>  testing for all
+											</span>
+										<!--	<i class="fa fa-angle-right"></i>  food facilities-->
+										 </p>
+									</div><!--/.packages-para-->
+
+									<div class="about-btn">
+										<button  class="about-view packages-btn">
+											More info
+										</button>
+									</div><!--/.about-btn-->
+								</div><!--/.single-package-item-txt-->
+							</div><!--/.single-package-item-->
+
+						</div><!--/.col-->
+
+						<div class="col-md-4 col-sm-6">
+							<div class="single-package-item">
+								<!--<img src="assets/pics/cvs3.jpg" alt="cvs">-->
+									<img src="assets/images/packages/p6.jpg" alt="package-place">
+								<div class="single-package-item-txt">
+									<h3>MinuteClinic(CVS) <span class="pull-right"></span></h3>
+									<div class="packages-para">
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i> appt. required
+											</span>
+											<i class="fa fa-angle-right"></i>  no referral
+										</p>
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i>  tests limited
+											</span>
+											<i class="fa fa-angle-right"></i>  =18yrs
+
+										 </p>
+
+									</div><!--/.packages-para-->
+
+									<div class="about-btn">
+										<button  class="about-view packages-btn">
+											More info
+										</button>
+									</div><!--/.about-btn-->
+								</div><!--/.single-package-item-txt-->
+							</div><!--/.single-package-item-->
+
+						</div><!--/.col-->
+						<div class="col-md-4 col-sm-6">
+							<div class="single-package-item">
+								<img src="assets/images/packages/p4.jpg" alt="package-place">
+								<div class="single-package-item-txt">
+									<h3>Urgent & Family Care Avery Ranch <span class="pull-right"></span></h3>
+									<div class="packages-para">
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i> appt. required
+											</span>
+											<i class="fa fa-angle-right"></i>  referral
+										</p>
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i>  testing for all
+											</span>
+											<i class="fa fa-angle-right"></i> telemed forms
+										 </p>
+									</div><!--/.packages-para-->
+
+									<div class="about-btn">
+										<button  class="about-view packages-btn">
+											More info
+										</button>
+									</div><!--/.about-btn-->
+								</div><!--/.single-package-item-txt-->
+							</div><!--/.single-package-item-->
+
+						</div><!--/.col-->
+
+						<div class="col-md-4 col-sm-6">
+							<div class="single-package-item">
+					<img src="assets/images/packages/p6.jpg" alt="package-place">
+								<div class="single-package-item-txt">
+									<h3>Remedy <span class="pull-right"></span></h3>
+									<div class="packages-para">
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i> appt. required
+											</span>
+											<i class="fa fa-angle-right"></i>  referral
+										</p>
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i>  testing for all
+											</span>
+											<i class="fa fa-angle-right"></i>  drive through
+										 </p>
+									</div><!--/.packages-para-->
+
+									<div class="about-btn">
+										<button  class="about-view packages-btn">
+											More info
+										</button>
+									</div><!--/.about-btn-->
+								</div><!--/.single-package-item-txt-->
+							</div><!--/.single-package-item-->
+
+						</div><!--/.col-->
+
+						<div class="col-md-4 col-sm-6">
+							<div class="single-package-item">
+								<img src="assets/pics/fastmed.jpg" alt="fastmed">
+								<div class="single-package-item-txt">
+									<h3>Fastmed urgent care <span class="pull-right"></span></h3>
+									<div class="packages-para">
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i> appt. required
+											</span>
+											<i class="fa fa-angle-right"></i>  referral
+										</p>
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i>  testing for all
+											</span>
+											<i class="fa fa-angle-right"></i>  drive through
+										 </p>
+									</div><!--/.packages-para-->
+
+									<div class="about-btn">
+										<button  class="about-view packages-btn">
+											More info
+										</button>
+									</div><!--/.about-btn-->
+								</div><!--/.single-package-item-txt-->
+							</div><!--/.single-package-item-->
+
+						</div><!--/.col-->
+
+					</div><!--/.row-->
+				</div><!--/.packages-content-->
+			</div><!--/.container-->
+
+		</section><!--/.packages-->
+		<!--packages end-->
+
+
+
+
+		<!--special-offer start-->
+		<section id="spo" class="special-offer">
+			<div class="container">
+				<div class="special-offer-content">
+					<div class="row">
+						<div class="col-sm-8">
+							<div class="single-special-offer">
+
+
+								<div class="single-special-offer-txt">
+									<h2>Survey</h2>
+
+									<div class="packages-para special-offer-para">
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i> Fever or chills
+											</span>
+											<span>
+												<i class="fa fa-angle-right"></i> Cough
+											</span>
+											<span>
+												<i class="fa fa-angle-right"></i>  Shortness of breath or difficulty breath
+											</span>
+										</p>
+										<p>
+											<span>
+												<i class="fa fa-angle-right"></i>  Fatigue
+											</span>
+											<span>
+												<i class="fa fa-angle-right"></i>  Headache
+											</span>
+										</p>
+										<p class="offer-para">
+											Do you have these symptoms? <br>People with COVID-19 have had a wide range of symptoms reported – ranging from
+											mild symptoms to severe illness. Symptoms may appear 2-14 days after exposure to the virus. Come and take this survey!
+										</p>
+									</div><!--/.packages-para-->
+									<div class="offer-btn-group">
+										<div class="about-btn">
+											<button  class="about-view packages-btn offfer-btn">
+												Take Survey
+											</button>
+										</div><!--/.about-btn-->
+
+									</div><!--/.offer-btn-group-->
+								</div><!--/.single-special-offer-txt-->
+							</div><!--/.single-special-offer-->
+						</div><!--/.col-->
+						<div class="col-sm-4">
+							<div class="single-special-offer">
+								<div class="single-special-offer-bg">
+									<img src="assets/images/offer/offer-shape.png" alt="offer-shape">
+								</div><!--/.single-special-offer-bg-->
+								<div class="single-special-shape-txt">
+									<h3>Free  Survey</h3>
+									<h4><span>10</span><br>minutes</h4>
+									<p><span>Self  check</span><br></p>
+								</div><!--/.single-special-shape-txt-->
+							</div><!--/.single-special-offer-->
+						</div><!--/.col-->
+					</div><!--/.row-->
+				</div><!--/.special-offer-content-->
+			</div><!--/.container-->
+
+		</section><!--/.special-offer end-->
+		<!--special-offer end-->
+
+		<!--blog start-->
+		<section id="blog" class="blog">
+			<div class="container">
+				<div class="blog-details">
+						<div class="gallary-header text-center">
+							<h2>
+								Helpful sources
+							</h2>
+							<p>
+								latest news about COVID-19
+							</p>
+						</div><!--/.gallery-header-->
+						<div class="blog-content">
+							<div class="row">
+
+								<div class="col-sm-4 col-md-4">
+									<div class="thumbnail">
+										<h2>trending news <span>15 november 2017</span></h2>
+										<div class="thumbnail-img">
+											<img src="assets/images/blog/b1.jpg" alt="blog-img">
+											<div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
+
+										</div><!--/.thumbnail-img-->
+
+										<div class="caption">
+											<div class="blog-txt">
+												<h3>
+													<a href="#">
+														Discover on beautiful weather, Fantastic foods and historical place in Prag
+													</a>
+												</h3>
+												<p>
+													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam
+												</p>
+												<a href="#">Read More</a>
+											</div><!--/.blog-txt-->
+										</div><!--/.caption-->
+									</div><!--/.thumbnail-->
+
+								</div><!--/.col-->
+
+								<div class="col-sm-4 col-md-4">
+									<div class="thumbnail">
+										<h2>trending news <span>15 november 2017</span></h2>
+										<div class="thumbnail-img">
+											<img src="assets/images/blog/b2.jpg" alt="blog-img">
+											<div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
+
+										</div><!--/.thumbnail-img-->
+										<div class="caption">
+											<div class="blog-txt">
+												<h3>
+													<a href="#">
+														Discover on beautiful weather, Fantastic foods and historical place in india
+													</a>
+												</h3>
+												<p>
+													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam
+												</p>
+												<a href="#">Read More</a>
+											</div><!--/.blog-txt-->
+										</div><!--/.caption-->
+									</div><!--/.thumbnail-->
+
+								</div><!--/.col-->
+
+								<div class="col-sm-4 col-md-4">
+									<div class="thumbnail">
+										<h2>trending news <span>15 november 2017</span></h2>
+										<div class="thumbnail-img">
+											<img src="assets/images/blog/b3.jpg" alt="blog-img">
+											<div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
+
+										</div><!--/.thumbnail-img-->
+										<div class="caption">
+											<div class="blog-txt">
+												<h3><a href="#">10 Most Natural place to Discover</a></h3>
+												<p>
+													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam
+												</p>
+												<a href="#">Read More</a>
+											</div><!--/.blog-txt-->
+										</div><!--/.caption-->
+									</div><!--/.thumbnail-->
+
+								</div><!--/.col-->
+
+							</div><!--/.row-->
+						</div><!--/.blog-content-->
+					</div><!--/.blog-details-->
+				</div><!--/.container-->
+
+		</section><!--/.blog-->
+		<!--blog end-->
+
+
+		<!--subscribe start-->
+		<section id="subs" class="subscribe">
+			<div class="container">
+				<div class="subscribe-title text-center">
+					<h2>
+						Suggest to subscribe these account to get COVID-19 News
+					</h2>
+					<p>
+						Subscribe Now. And get the most accurate information
+					</p>
+				</div>
+				<form>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+							<div class="custom-input-group">
+
+								<div class="clearfix"></div>
+
+							</div>
+
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</section>
+		<!--subscribe end-->
+		<!-- testemonial Start -->
+		<section   class="testemonial">
+			<div class="container">
+
+				<div class="gallary-header text-center">
+					<h2>
+						Accounts
+					</h2>
+					<p>
+						Official accounts from the government
+					</p>
+
+				</div><!--/.gallery-header-->
+
+				<div class="owl-carousel owl-theme" id="testemonial-carousel">
+
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+								</span>
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
+
+					</div><!--/.item-->
+
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial2.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+								</span>
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
+
+					</div><!--/.item-->
+
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+								</span>
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
+
+					</div><!--/.item-->
+
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+								</span>
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
+
+					</div><!--/.item-->
+
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial2.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+								</span>
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
+
+					</div><!--/.item-->
+
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+								</span>
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
+
+					</div><!--/.item-->
+
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+								</span>
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
+
+					</div><!--/.item-->
+
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial2.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+								</span>
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
+
+					</div><!--/.item-->
+
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+								</span>
+								<p>
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</p>
+								<h3>
+									<a href="#">
+										kevin watson
+									</a>
+								</h3>
+								<h4>london, england</h4>
+							</div><!--/.home1-testm-txt-->
+						</div><!--/.home1-testm-single-->
+
+					</div><!--/.item-->
+
+				</div><!--/.testemonial-carousel-->
+			</div><!--/.container-->
+
+		</section><!--/.testimonial-->
+		<!-- testemonial End -->
+
+		<!-- footer-copyright start -->
+		<footer  class="footer-copyright">
+			<div class="container">
+				<div class="footer-content">
+					<div class="row">
+
+						<div class="col-sm-3">
+							<div class="single-footer-item">
+								<div class="footer-logo">
+									<a href="index.html">
+										Test<span>MAP</span>
+									</a>
+									<p>
+										Your best tool to schedule a COVID-19 Test
+									</p>
+								</div>
+							</div><!--/.single-footer-item-->
+						</div><!--/.col-->
+
+						<div class="col-sm-3">
+							<div class="single-footer-item">
+								<h2>link</h2>
+								<div class="single-footer-txt">
+									<p><a href="#">home</a></p>
+									<p><a href="#">Map</a></p>
+									<p><a href="#">Schedule</a></p>
+									<p><a href="#">Survey</a></p>
+									<p><a href="#">contacts</a></p>
+								</div><!--/.single-footer-txt-->
+							</div><!--/.single-footer-item-->
+
+						</div><!--/.col-->
+
+						<div class="col-sm-3">
+							<div class="single-footer-item">
+								<h2>Map</h2>
+								<div class="single-footer-txt">
+									<p><a href="#">china</a></p>
+									<p><a href="#">venezuela</a></p>
+									<p><a href="#">brazil</a></p>
+									<p><a href="#">australia</a></p>
+									<p><a href="#">london</a></p>
+								</div><!--/.single-footer-txt-->
+							</div><!--/.single-footer-item-->
+						</div><!--/.col-->
+
+						<div class="col-sm-3">
+							<div class="single-footer-item text-center">
+								<h2 class="text-left">contacts</h2>
+								<div class="single-footer-txt text-left">
+									<p>+1 (300) 1234 6543</p>
+									<p class="foot-email"><a href="#">info@tnest.com</a></p>
+									<p>CTM Summer Internship Program</p>
+									<p>Austin,TX</p>
+								</div><!--/.single-footer-txt-->
+							</div><!--/.single-footer-item-->
+						</div><!--/.col-->
+
+					</div><!--/.row-->
+
+				</div><!--/.footer-content-->
+				<hr>
+				<div class="foot-icons ">
+					<ul class="footer-social-links list-inline list-unstyled">
+		                <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
+		                <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
+		                <li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
+		        	</ul>
+		        	<!--<p>&copy; 2017 <a href="https://www.themesine.com">ThemeSINE</a>. All Right Reserved</p>-->
+
+		        </div><!--/.foot-icons-->
+				<div id="scroll-Top">
+					<i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div><!--/.scroll-Top-->
+			</div><!-- /.container-->
+
+		</footer><!-- /.footer-copyright-->
+		<!-- footer-copyright end -->
+
+
+
+
+		<script src="assets/js/jquery.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+		<!--modernizr.min.js-->
+		<script  src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+
+		<!--bootstrap.min.js-->
+		<script  src="assets/js/bootstrap.min.js"></script>
+
+		<!-- bootsnav js -->
+		<script src="assets/js/bootsnav.js"></script>
+
+		<!-- jquery.filterizr.min.js -->
+		<script src="assets/js/jquery.filterizr.min.js"></script>
+
+		<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+		<!--jquery-ui.min.js-->
+        <script src="assets/js/jquery-ui.min.js"></script>
+
+        <!-- counter js -->
+		<script src="assets/js/jquery.counterup.min.js"></script>
+		<script src="assets/js/waypoints.min.js"></script>
+
+		<!--owl.carousel.js-->
+        <script  src="assets/js/owl.carousel.min.js"></script>
+
+        <!-- jquery.sticky.js -->
+		<script src="assets/js/jquery.sticky.js"></script>
+
+        <!--datepicker.js-->
+        <script  src="assets/js/datepicker.js"></script>
+
+		<!--Custom JS-->
+		<script src="assets/js/custom.js"></script>
+
+
+	</body>
+
+</html>
