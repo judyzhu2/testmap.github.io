@@ -532,6 +532,7 @@
     google.maps.event.addListener(marker,'click', (function(marker,content){
       return function() {
           locationInfowindow.setContent(content);
+	  locationInfowindow.setOptions({maxWidth:250});
           locationInfowindow.open(map,marker);
       };
      })(marker,content));
