@@ -245,7 +245,28 @@
 
       // icons
       var zeroMarker = {
-        url:'https://i.imgur.com/aRJGWIV.png',
+        url:'https://i.imgur.com/B9SCCwI.png',
+        scaledSize: new google.maps.Size(30,40),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(15, 40
+      )
+      }
+      var fifteenMarker = {
+        url:'https://i.imgur.com/A8uLfBU.png',
+        scaledSize: new google.maps.Size(30,40),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(15, 40
+      )
+      }
+      var thirtyMarker = {
+        url:'https://i.imgur.com/NeyO5g7.png',
+        scaledSize: new google.maps.Size(30,40),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(15, 40
+      )
+      }
+      var sixtyMarker = {
+        url:'https://i.imgur.com/gAdgfIe.png',
         scaledSize: new google.maps.Size(30,40),
         origin: new google.maps.Point(0,0),
         anchor: new google.maps.Point(15, 40
@@ -288,7 +309,7 @@
         },
         {
           coords:{lat:30.226410,lng:-97.891457},
-          iconImage:zeroMarker,
+          iconImage:thirtyMarker,
           content:
             '<div id="content">' +
             '<div id="siteNotice">' +
@@ -304,7 +325,7 @@
         },
 				{
           coords:{lat:30.228270,lng:-97.862980},
-          iconImage:zeroMarker,
+          iconImage:fifteenMarker,
           content:
             '<div id="content">' +
             '<div id="siteNotice">' +
@@ -320,7 +341,7 @@
         },
         {
           coords:{lat:30.322380,lng:-97.699890},
-          iconImage:zeroMarker,
+          iconImage:sixtyMarker,
           content:
             '<div id="content">' +
             '<div id="siteNotice">' +
@@ -336,7 +357,7 @@
         },
         {
           coords:{lat:30.233497,lng:-97.824390},
-          iconImage:zeroMarker,
+          iconImage:thirtyMarker,
           content:
             '<div id="content">' +
             '<div id="siteNotice">' +
@@ -352,7 +373,7 @@
         },
         {
           coords:{lat:30.281677,lng:-97.775086},
-          iconImage:zeroMarker,
+          iconImage:fifteenMarker,
           content:
             '<div id="content">' +
             '<div id="siteNotice">' +
@@ -368,7 +389,7 @@
         },
         {
           coords:{lat:30.500060,lng:-97.777228},
-          iconImage:zeroMarker,
+          iconImage:sixtyMarker,
           content:
             '<div id="content">' +
             '<div id="siteNotice">' +
@@ -391,16 +412,16 @@
             "</div>" +
             '<h1 id="firstHeading" class="firstHeading">Remedy</h1>' +
             '<div id="bodyContent">' +
-            "<p><b>Remedy</b> is located at <b>3200 Jones Rd, Austin, TX 72735 </b></p>" +
+            "<p><b>Remedy</b> is located at <b>3200 Jones Road Austin, Texas 78745 </b></p>" +
             "<p>Appt. required, referral, testing for all, drive-through</p> <p>Online screening: Video visit with provider to determine what to do and if to get tested</p>" +
             '<p>Website: <a href="https://myremedy.com/"target="_blank">' +
-            "https://myremedy.com/</a></p>" +
+            "https://myremedy.com/</a></p><p>Phone Number: <a href='tel:8447363395'>(844) 736-3395</a></p>" +
             "</div>" +
             "</div>"
         },
         {
           coords:{lat:30.301999,lng:-97.744712},
-          iconImage:zeroMarker,
+          iconImage:thirtyMarker,
           content:
             '<div id="content">' +
             '<div id="siteNotice">' +
@@ -416,7 +437,7 @@
         },
         {
           coords:{lat:30.171178,lng:-97.823623},
-          iconImage:zeroMarker,
+          iconImage:fifteenMarker,
           content:
             '<div id="content">' +
             '<div id="siteNotice">' +
@@ -426,7 +447,7 @@
             "<p><b>Austin Regional Clinic: ARC Southwest</b> is located at <b>1807 W Slaughter Ln Suite 490, Austin, TX 78748 </b></p>" +
             "<p>Appointment Necessary, Must see provider before testing, Costs $201, Insurance not required</p> <p>Drive Through: Monday through Friday 5PM-7PM, Saturday and Sunday 8AM to 5PM</p>" +
             '<p>Website: <a href="https://mychart.austinregionalclinic.com/mychart/openscheduling"target="_blank">' +
-            "https://mychart.austinregionalclinic.com/mychart/openscheduling</a></p><p>Phone Number: <a href='tel:866453452'>866-453-452</a></p>" +
+            "https://mychart.austinregionalclinic.com/mychart/openscheduling</a></p><p>Phone Number: <a href='tel:866453452'>(866) 453-452</a></p>" +
             "</div>" +
             "</div>"
         },
@@ -442,13 +463,13 @@
             "<p><b>Southeast Branch Library</b> is located at <b>5803 Nuckols Crossing, Austin, TX, 78744 </b></p>" +
             "<p>Walk-On, No appointment necessary, free</p> " +
             '<p>Website: <a href="https://www.austintexas.gov/covid19"target="_blank">' +
-            "https://www.austintexas.gov/covid19</a></p><p>Phone Number: <a href='tel:5129742000'>512-974-2000</a></p>" +
+            "https://www.austintexas.gov/covid19</a></p><p>Phone Number: <a href='tel:5129742000'>(512) 974-2000</a></p>" +
             "</div>" +
             "</div>"
         },
         {
           coords:{lat:30.227328,lng:-97.769560},
-          iconImage:zeroMarker,
+          iconImage:fifteenMarker,
           content:
             '<div id="content">' +
             '<div id="siteNotice">' +
@@ -457,8 +478,24 @@
             '<div id="bodyContent">' +
             "<p><b>Austin Regional Clinic: ARC South 1st</b> is located at <b>3828 S 1st St, Austin, TX 78704 </b></p>" +
             "<p>Appointment Necessary, </p> " +
+            '<p>Website: <a href="https://mychart.austinregionalclinic.com/mychart/openscheduling"target="_blank">' +
+            "https://mychart.austinregionalclinic.com/mychart/openscheduling</a></p><p>Phone Number: <a href='tel:866453452'>(866) 453-452</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.255866,lng:-97.762532},
+          iconImage:fifteenMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Kalologie MedSpa Austin</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Kalologie MedSpa Austin</b> is located at <b>1100 S. Lamar Blvd Suite 2120, Austin, TX 78704 </b></p>" +
+            "<p>No appointment necessary, Must see provider before testing, Costs $119</p><p>Walk-in, Tuesday and Wednesday 10AM - 5PM</p> " +
             '<p>UPDATE Website: <a href="https://www.austintexas.gov/covid19"target="_blank">' +
-            "https://www.austintexas.gov/covid19</a></p><p>Phone Number: <a href='tel:5129742000'>512-974-2000</a></p>" +
+            "https://www.austintexas.gov/covid19</a></p><p>Phone Number: <a href='tel:7377810391'>737-781-0391</a></p>" +
             "</div>" +
             "</div>"
         },
@@ -495,6 +532,7 @@
     google.maps.event.addListener(marker,'click', (function(marker,content){
       return function() {
           locationInfowindow.setContent(content);
+	  locationInfowindow.setOptions({maxWidth:250});
           locationInfowindow.open(map,marker);
       };
      })(marker,content));
