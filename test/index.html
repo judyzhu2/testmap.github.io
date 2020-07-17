@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Filter the table using Search Box</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="wrapper">
+  <div class="header">
+    <div class="title">
+      Location Search
+    </div>
+
+    <div class="search_box">
+      <input type="text" id="search_input" placeholder="Zip Code">
+    </div>
+  </div>
+
+  <div class="table_wrap">
+    <div class="table_header">
+      <ul>
+        <li>
+          <div class="item">
+            <div class="name">
+              <span>Name</span>
+            </div>
+            <div class="phone">
+              <span>Zip Code</span>
+            </div>
+            <div class="issue">
+              <span>Provider</span>
+            </div>
+            <div class="status">
+              <span>Map</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="table_body">
+      <ul>
+        <li>
+          <div class="item">
+            <div class="name">
+              <span>FastMed Urgent Care</span>
+            </div>
+            <div class="phone">
+              <span>78734</span>
+            </div>
+            <div class="issue">
+              <span>private</span>
+            </div>
+            <div class="status">
+              <span class="open">Map</span>
+            </div>
+          </div>
+        </li>
+
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Ascension Seton Southwest</span>
+						</div>
+						<div class="phone">
+							<span>78737</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>NextCare Urgent Care</span>
+						</div>
+						<div class="phone">
+							<span>78749</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Baylor Scott & White Medical Center</span>
+						</div>
+						<div class="phone">
+							<span>78735</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>CareNow Urgent Care - Southwest Austin</span>
+						</div>
+						<div class="phone">
+							<span>78746</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>MinuteClinic (CVS)</span>
+						</div>
+						<div class="phone">
+							<span>78703</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Urgent And Family Care Avery Ranch</span>
+						</div>
+						<div class="phone">
+							<span>78717</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Remedy</span>
+						</div>
+						<div class="phone">
+							<span>72735</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Fastmed Urgent Care</span>
+						</div>
+						<div class="phone">
+							<span>78705</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Austin Regional Clinic: ARC Southwest</span>
+						</div>
+						<div class="phone">
+							<span>78748</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Southeast Branch Library</span>
+						</div>
+						<div class="phone">
+							<span>78744</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Austin Regional Clinic: ARC South 1st</span>
+						</div>
+						<div class="phone">
+							<span>78704</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Remedy- Drive Thru Clinic</span>
+						</div>
+						<div class="phone">
+							<span>78745</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Kalologie MedSpa Austin</span>
+						</div>
+						<div class="phone">
+							<span>78704</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Austin Public Health Givens Park</span>
+						</div>
+						<div class="phone">
+							<span>78721</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Partners In Health/Roxana Rhodes M.D.</span>
+						</div>
+						<div class="phone">
+							<span>78705</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Austin Emergency Center Mueller</span>
+						</div>
+						<div class="phone">
+							<span>78723</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>PCC North</span>
+						</div>
+						<div class="phone">
+							<span>78752</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Little Walnut Creek Library</span>
+						</div>
+						<div class="phone">
+							<span>78758</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>CareNow TechRidge</span>
+						</div>
+						<div class="phone">
+							<span>78753</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>ExpressMD Urgent Care</span>
+						</div>
+						<div class="phone">
+							<span>78660</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Austin Regional Clinic: ARC Round Rock</span>
+						</div>
+						<div class="phone">
+							<span>78681</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>ARC Anderson Mill</span>
+						</div>
+						<div class="phone">
+							<span>78750</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>CareNow Anderson Mill</span>
+						</div>
+						<div class="phone">
+							<span>78726</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>Cedar Park Pediatric & Family Medicine</span>
+						</div>
+						<div class="phone">
+							<span>78613</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>St. David's CareNow Hutto</span>
+						</div>
+						<div class="phone">
+							<span>78664</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item">
+						<div class="name">
+							<span>St. David's CareNow Georgetown</span>
+						</div>
+						<div class="phone">
+							<span>78626</span>
+						</div>
+						<div class="issue">
+							<span>private</span>
+						</div>
+						<div class="status">
+							<span class="open">Map</span>
+						</div>
+					</div>
+				</li>
+
+			
+      </ul>
+    </div>
+  </div>
+
+<script src="scripts.js"></script>
+
+</div>
+</body>
+</html>
