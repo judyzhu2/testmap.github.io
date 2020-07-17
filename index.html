@@ -50,6 +50,8 @@
 		<!--responsive.css-->
 		<link rel="stylesheet" href="assets/css/responsive.css" />
 
+		<link rel="stylesheet" href="assets/css/filter.css">
+
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 
@@ -573,10 +575,10 @@
 								<div class="collapse navbar-collapse">
 									<ul class="nav navbar-nav navbar-right">
 										<li class="smooth-menu"><a href="#home">Home</a></li>
-										<li class="smooth-menu"><a href="#gallery">Map</a></li>
+										<li class="smooth-menu"><a href="#gallery">Testing Locations</a></li>
 										<li class="smooth-menu"><a href="#pack">Schedule </a></li>
 										<li><a href="survey/index.html">Survey</a></li>
-										<li class="smooth-menu"><a href="#blog">Helpful sources</a></li>
+										<li class="smooth-menu"><a href="#blog">Learn More</a></li>
 
 
 
@@ -609,7 +611,7 @@
 										<button  class="about-view">
 											<a href="subpage/index.html">About Us</a>
 										</button>
-									</div>  
+									</div>
 								</div>
 							</div>
 						</div>
@@ -628,7 +630,7 @@
 		<!--travel-box start-->
 		<section id="search" class="travel-box">
 
-        	<div class="container">
+        	<!--<div class="container">
         		<div class="row">
         			<div class="col-md-12">
         				<div class="single-travel-boxes">
@@ -648,7 +650,7 @@
 
 								</ul>
 
-								<!-- Tab panes -->
+
 								<div class="tab-content">
 
 									<div role="tabpanel" class="tab-pane active fade in" id="tours">
@@ -658,35 +660,11 @@
 												<div class="col-lg-4 col-md-4 col-sm-12">
 													<div class="single-tab-select-box">
 
-														<h2>destination</h2>
+														<h2>Zip Code</h2>
+                          <div class="search_box">
+														<input type="text" id="search_input" name="zipcode" class="form-control">
 
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">Select your County</option><!-- /.option-->
-
-															  	<option value="turkey">Bastrop</option><!-- /.option-->
-
-															  	<option value="russia">Caldwell</option><!-- /.option-->
-															  	<option value="egept">Hays</option><!-- /.option-->
-																	<option value="egept">Travis</option>
-																	<option value="egept">Williamson</option>
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-
-														<!--<div class="travel-select-icon">-->
-															<!--<select class="form-control ">
-
-															  	<option value="default">enter your destination location</option>
-
-															  	<option value="istambul">istambul</option>
-
-															  	<option value="mosko">mosko</option>
-															  	<option value="cairo">cairo</option>
-
-															</select>
-														</div>-->
+                          </div>
 
 													</div>
 												</div>
@@ -698,7 +676,7 @@
 															<form action="#">
 																<input type="text" name="check_in" class="form-control" data-toggle="datepicker" >
 															</form>
-														</div><!-- /.travel-check-icon -->
+														</div>
 													</div>
 												</div>
 
@@ -710,13 +688,13 @@
 														<div class="travel-select-icon">
 															<select class="form-control ">
 
-															  	<option value="default">private</option><!-- /.option-->
+															  	<option value="default">private</option>
 
-															  	<option value="10">government</option><!-- /.option-->
+															  	<option value="10">government</option>
 
 
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
+															</select>
+														</div>
 													</div>
 												</div>
 
@@ -738,7 +716,8 @@
 														</div>
 													</div>
 												</div>
-												<div class="clo-sm-7">
+
+											<div class="clo-sm-7">
 													<div class="about-btn travel-mrt-0 pull-right">
 														<button  class="about-view travel-btn">
 															search
@@ -750,288 +729,561 @@
 
 										</div>
 
+<table class="table table-striped w-auto">
+
+
+
+
+							<div class="table_wrap">
+								<div class="table_header">
+									<thead>
+
+
+									<ul>
+										<li>
+
+
+
+											<div class="item">
+												<div class="name">
+													<th><span>name</span></th>
+
+												</div>
+												<div class="provider">
+													<th><span>Provider</span></th>
+												</div>
+												<div class="openhours">
+													<th><span>Open Hours</span></th>
+												</div>
+												<div class="zipcode">
+													<th><span>Zip Code</span></th>
+												</div>
+												<div class="map">
+													<th><span>Map</span></th>
+												</div>
+											</div>
+										</li>
+									</ul>
+
+	</thead>
+								</div>
+								<tbody>
+
+
+
+
+								<div class="table_body">
+									<ul>
+
+
+											<div class="item" class="table-info">
+
+												<div class="name">
+													<td><span>FastMed Urgent Care</span></td>
+												</div>
+
+												<div class="provider">
+													<td><span>private</span></td>
+												</div>
+
+												<div class="openhours">
+													<td><span>...openhour</span></td>
+												</div>
+
+												<div class="zipcode">
+													<td><span>78734</span></td>
+												</div>
+
+												<div class="map">
+													<td><span>...map</span></td>
+												</div>
+
+											</div>
+
+
+
+
+<tr>
+
+											<div class="item">
+
+												<div class="name">
+													<td><span>Ascension Seton Southwest</span></td>
+												</div>
+
+												<div class="provider">
+													<td><span>private</span></td>
+												</div>
+
+												<div class="openhours">
+													<td><span>...openhour</span></td>
+												</div>
+
+												<div class="zipcode">
+													<td><span>78737</span></td>
+												</div>
+
+												<div class="map">
+													<td><span>...map</span></td>
+												</div>
+
+											</div>
+
+										</tr>
+<tr class="table-info">
+
+											<div class="item">
+
+												<div class="name">
+													<td><span>NextCare Urgent Care</span></td>
+												</div>
+
+												<div class="provider">
+													<td><span>private</span></td>
+												</div>
+
+												<div class="openhours">
+													<td><span>...openhour</span></td>
+												</div>
+
+												<div class="zipcode">
+													<td><span>78749</span></td>
+												</div>
+
+												<div class="map">
+													<td><span>...map</span></td>
+												</div>
+
+											</div>
+
+									</tr>
+<tr>
+
+
+
+											<div class="item">
+
+												<div class="name">
+													<td><span>Baylor Scott & White Medical Center</span></td>
+												</div>
+
+												<div class="provider">
+													<td><span>private</span></td>
+												</div>
+
+												<div class="openhours">
+													<td><span>...openhour</span></td>
+												</div>
+
+												<div class="zipcode">
+													<td><span>78735</span></td>
+												</div>
+
+												<div class="map">
+													<td><span>...map</span></td>
+												</div>
+
+											</div>
+
+										</tr>
+<tr>
+
+
+
+											<div class="item">
+
+												<div class="name">
+													<td><span>CareNow Urgent Care - Southwest Austin</span></td>
+												</div>
+
+												<div class="provider">
+													<td><span>private</span></td>
+												</div>
+
+												<div class="openhours">
+												<td>	<span>...openhour</span></td>
+												</div>
+
+												<div class="zipcode">
+													<td><span>78746</span></td>
+												</div>
+
+												<div class="map">
+													<td><span>...map</span></td>
+												</div>
+
+											</div>
+
+										</tr>
+										<tr>
+
+
+											<div class="item">
+
+												<div class="name">
+													<td><span>MinuteClinic (CVS)</span></td>
+												</div>
+
+												<div class="provider">
+													<td><span>private</span></td>
+												</div>
+
+												<div class="openhours">
+													<td><span>...openhour</span></td>
+												</div>
+
+												<div class="zipcode">
+													<td><span>78703</span></td>
+												</div>
+
+												<div class="map">
+													<td><span>...map</span></td>
+												</div>
+
+											</div>
+
+										</tr>
+
+
+
+
+									</ul>
+								</div>
+</tbody>
+							</div>
+							</table>
+							<script src="script.js"></script>
+
 									</div>
 
-									<div role="tabpanel" class="tab-pane fade in" id="hotels">
-										<div class="tab-para">
 
-											<div class="row">
-												<div class="col-lg-4 col-md-4 col-sm-12">
-													<div class="single-tab-select-box">
 
-
-
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">enter your destination country</option><!-- /.option-->
-
-															  	<option value="turkey">turkey</option><!-- /.option-->
-
-															  	<option value="russia">russia</option><!-- /.option-->
-															  	<option value="egept">egypt</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">enter your destination location</option><!-- /.option-->
-
-															  	<option value="istambul">istambul</option><!-- /.option-->
-
-															  	<option value="mosko">mosko</option><!-- /.option-->
-															  	<option value="cairo">cairo</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-
-													</div>
-												</div>
-
-												<div class="col-lg-2 col-md-3 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>check in</h2>
-														<div class="travel-check-icon">
-															<form action="#">
-																<input type="text" name="check_in" class="form-control" data-toggle="datepicker" placeholder="12 -01 - 2017 ">
-															</form>
-														</div><!-- /.travel-check-icon -->
-													</div>
-												</div>
-
-												<div class="col-lg-2 col-md-3 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>check out</h2>
-														<div class="travel-check-icon">
-															<form action="#">
-																<input type="text" name="check_out" class="form-control"  data-toggle="datepicker" placeholder="22 -01 - 2017 ">
-															</form>
-														</div><!-- /.travel-check-icon -->
-													</div>
-												</div>
-
-												<div class="col-lg-2 col-md-1 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>duration</h2>
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">5</option><!-- /.option-->
-
-															  	<option value="10">10</option><!-- /.option-->
-
-															  	<option value="15">15</option><!-- /.option-->
-															  	<option value="20">20</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div>
-												</div>
-
-												<div class="col-lg-2 col-md-1 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>members</h2>
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">1</option><!-- /.option-->
-
-															  	<option value="2">2</option><!-- /.option-->
-
-															  	<option value="4">4</option><!-- /.option-->
-															  	<option value="8">8</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div>
-												</div>
-
-											</div>
-
-											<div class="row">
-												<div class="col-sm-5"></div>
-												<div class="clo-sm-7">
-													<div class="about-btn travel-mrt-0 pull-right">
-														<button  class="about-view travel-btn">
-															search
-														</button>
-													</div>
-												</div>
-
-											</div>
-
-										</div>
-
-									</div>
-
-									<div role="tabpanel" class="tab-pane fade in" id="flights">
-										<div class="tab-para">
-											<div class="trip-circle">
-												<div class="single-trip-circle">
-													<input type="radio" id="radio01" name="radio" />
-  													<label for="radio01">
-  														<span class="round-boarder">
-  															<span class="round-boarder1"></span>
-  														</span>round trip
-  													</label>
-												</div>
-												<div class="single-trip-circle">
-													<input type="radio" id="radio02" name="radio" />
-  													<label for="radio02">
-  														<span class="round-boarder">
-  															<span class="round-boarder1"></span>
-  														</span>on way
-  													</label>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-lg-4 col-md-4 col-sm-12">
-													<div class="single-tab-select-box">
-
-														<h2>from</h2>
-
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">enter your location</option><!-- /.option-->
-
-															  	<option value="turkey">turkey</option><!-- /.option-->
-
-															  	<option value="russia">russia</option><!-- /.option-->
-															  	<option value="egept">egypt</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div>
-												</div>
-
-												<div class="col-lg-2 col-md-3 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>departure</h2>
-														<div class="travel-check-icon">
-															<form action="#">
-																<input type="text" name="departure" class="form-control" data-toggle="datepicker"
-																placeholder="12 -01 - 2017 ">
-															</form>
-														</div><!-- /.travel-check-icon -->
-													</div>
-												</div>
-
-												<div class="col-lg-2 col-md-3 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>return</h2>
-														<div class="travel-check-icon">
-															<form action="#">
-																<input type="text" name="return" class="form-control" data-toggle="datepicker" placeholder="22 -01 - 2017 ">
-															</form>
-														</div><!-- /.travel-check-icon -->
-													</div>
-												</div>
-
-												<div class="col-lg-2 col-md-1 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>adults</h2>
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">5</option><!-- /.option-->
-
-															  	<option value="10">10</option><!-- /.option-->
-
-															  	<option value="15">15</option><!-- /.option-->
-															  	<option value="20">20</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div>
-												</div>
-
-												<div class="col-lg-2 col-md-1 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>childs</h2>
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">1</option><!-- /.option-->
-
-															  	<option value="2">2</option><!-- /.option-->
-
-															  	<option value="4">4</option><!-- /.option-->
-															  	<option value="8">8</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div>
-												</div>
-
-											</div>
-
-											<div class="row">
-												<div class="col-lg-4 col-md-4 col-sm-12">
-													<div class="single-tab-select-box">
-
-														<h2>to</h2>
-
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">enter your destination location</option><!-- /.option-->
-
-															  	<option value="istambul">istambul</option><!-- /.option-->
-
-															  	<option value="mosko">mosko</option><!-- /.option-->
-															  	<option value="cairo">cairo</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-
-													</div>
-												</div>
-												<div class="col-lg-3 col-md-3 col-sm-4">
-													<div class="single-tab-select-box">
-
-														<h2>class</h2>
-														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">enter class</option><!-- /.option-->
-
-															  	<option value="A">A</option><!-- /.option-->
-
-															  	<option value="B">B</option><!-- /.option-->
-															  	<option value="C">C</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div>
-												</div>
-												<div class="clo-sm-5">
-													<div class="about-btn pull-right">
-														<button  class="about-view travel-btn">
-															search
-														</button>
-													</div>
-												</div>
-
-											</div>
-
-										</div>
-
-									</div>
 
 								</div>
 							</div>
         				</div>
         			</div>
         		</div>
-        	</div>
+        	</div>-->
+					<div class="wrapper">
+					  <div class="header">
+					    <div class="title">
+					      Location Search
+					    </div>
+
+					    <div class="search_box">
+					      <input type="text" id="search_input" placeholder="Zip Code">
+					    </div>
+					  </div>
+
+					  <div class="table_wrap">
+					    <div class="table_header">
+					      <ul>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Name</span>
+					            </div>
+					            <div class="phone">
+					              <span>Provider</span>
+					            </div>
+					            <div class="issue">
+					              <span>Open Hours</span>
+					            </div>
+					            <div class="status">
+					              <span>Zip Code</span>
+					            </div>
+					          </div>
+					        </li>
+					      </ul>
+					    </div>
+					    <div class="table_body">
+					      <ul>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Alex</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 111 222 333</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem ipsum dolor sit amet.</span>
+					            </div>
+					            <div class="status">
+					              <span class="open">Open</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Max Johnson</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 331 442 436</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>
+					            </div>
+					            <div class="status">
+					              <span class="reopened">Reopened</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>scarlett johansson</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 341 242 336</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem, ipsum dolor.</span>
+					            </div>
+					            <div class="status">
+					              <span class="fixed">Fixed</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Rosey</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 331 442 436</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem ipsum dolor sit amet consectetur.</span>
+					            </div>
+					            <div class="status">
+					              <span class="closed">Closed</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>John</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 331 442 436</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem, ipsum.</span>
+					            </div>
+					            <div class="status">
+					              <span class="hold">Hold</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Max Johnson</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 331 442 436</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>
+					            </div>
+					            <div class="status">
+					              <span class="open">open</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Sarah Glenn</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 111 222 333</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem ipsum dolor sit amet.</span>
+					            </div>
+					            <div class="status">
+					              <span class="open">Open</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Hayley Matthews</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 331 442 436</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem ipsum dolor sit.</span>
+					            </div>
+					            <div class="status">
+					              <span class="canceled">Canceled</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Sarah Glenn</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 111 222 333</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem ipsum dolor sit amet.</span>
+					            </div>
+					            <div class="status">
+					              <span class="open">Open</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>John</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 331 442 436</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem, ipsum.</span>
+					            </div>
+					            <div class="status">
+					              <span class="hold">Hold</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Kate Cross</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 341 242 336</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem, ipsum dolor.</span>
+					            </div>
+					            <div class="status">
+					              <span class="fixed">Fixed</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Jake Lehmann</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 331 442 436</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem ipsum dolor sit amet consectetur.</span>
+					            </div>
+					            <div class="status">
+					              <span class="closed">Closed</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Richard Gleeson</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 331 442 436</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem, ipsum.</span>
+					            </div>
+					            <div class="status">
+					              <span class="hold">Hold</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Oliver Robinson</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 331 442 436</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>
+					            </div>
+					            <div class="status">
+					              <span class="reopened">Reopened</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Richard Gleeson</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 331 442 436</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem, ipsum.</span>
+					            </div>
+					            <div class="status">
+					              <span class="hold">Hold</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Max Johnson</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 331 442 436</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span>
+					            </div>
+					            <div class="status">
+					              <span class="closed">closed</span>
+					            </div>
+					          </div>
+					        </li>
+					        <li>
+					          <div class="item">
+					            <div class="name">
+					              <span>Sam Whiteman</span>
+					            </div>
+					            <div class="phone">
+					              <span>+1 331 442 436</span>
+					            </div>
+					            <div class="issue">
+					              <span>Lorem ipsum dolor sit.</span>
+					            </div>
+					            <div class="status">
+					              <span class="canceled">Canceled</span>
+					            </div>
+					          </div>
+					        </li>
+					      </ul>
+					    </div>
+					  </div>
+
+					<script src="scripts.js"></script>
+
+					</div>
+
 
         </section>
-		<!--travel-box end-->
 
-        <!--service start-->
+
+
 		<section id="service" class="service">
 			<div class="container">
 
@@ -1061,7 +1313,7 @@
 							<div class="service-content">
 								<h2>
 									<a href="#">
-										Map with locations
+										Locations
 									</a>
 								</h2>
 								<p>Map with locations of centers and information about each one.</p>
@@ -1226,9 +1478,9 @@
 					</p>
 				</div>
 				<div class="packages-content">
-					<iframe id="sagendaFrame" src="https://www.sagenda.net/Frontend/Calendar/5f0f573f29ec15306c7cd5de" scrolling="no" height="1300" style="width:100%" frameborder="0" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-top-navigation allow-scripts allow-forms">
+					<iframe id="sagendaFrame" src="https://www.sagenda.net/Frontend/Calendar/5f0f573f29ec15306c7cd5de" scrolling="no" height="1300" style="width:100%" frameborder="0" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-top-navigation allow-scripts allow-forms"></iframe>
 
-					</iframe>
+
 					<!--<div class="row">
 
 						<div class="col-md-4 col-sm-6">
@@ -1568,7 +1820,7 @@
 								</div>
 								<div class="single-special-shape-txt">
 									<h3>Optional  Survey</h3>
-									<h4><span>5</span><br>minutes</h4>
+									<h4><span>3</span><br>minutes</h4>
 									<p><span>Self  check</span><br></p>
 								</div>
 							</div>
@@ -1586,10 +1838,10 @@
 				<div class="blog-details">
 						<div class="gallary-header text-center">
 							<h2>
-								Helpful sources
+								Learn More
 							</h2>
 							<p>
-								latest news about COVID-19
+								Get more facts about COVID-19
 							</p>
 						</div>
 						<div class="blog-content">
@@ -1680,10 +1932,10 @@
 			<div class="container">
 				<div class="subscribe-title text-center">
 					<h2>
-						Suggest to subscribe these account to get COVID-19 News
+						Find answers
 					</h2>
 					<p>
-						Subscribe Now. And get the most accurate information
+ to some of the most common questions about COVID-19
 					</p>
 				</div>
 				<form>
@@ -1708,10 +1960,10 @@
 
 				<div class="gallary-header text-center">
 					<h2>
-						Accounts
+						FAQ
 					</h2>
 					<p>
-						Official accounts from the government
+						Common questions about COVID-19
 					</p>
 
 				</div>
@@ -1721,7 +1973,7 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+								<!--<img src="assets/images/client/testimonial1.jpg" alt="img"/>-->
 							</div>
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -1744,7 +1996,7 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="assets/images/client/testimonial2.jpg" alt="img"/>
+
 							</div>
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -1767,7 +2019,7 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+
 							</div>
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -1790,7 +2042,7 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+
 							</div>
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -1813,7 +2065,7 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="assets/images/client/testimonial2.jpg" alt="img"/>
+
 							</div>
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -1836,7 +2088,7 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+
 							</div>
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -1859,7 +2111,7 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+
 							</div>
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -1882,7 +2134,7 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="assets/images/client/testimonial2.jpg" alt="img"/>
+
 							</div>
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -1905,7 +2157,7 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="assets/images/client/testimonial1.jpg" alt="img"/>
+
 							</div>
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
@@ -1954,7 +2206,7 @@
 								<h2>link</h2>
 								<div class="single-footer-txt">
 									<p><a href="#">home</a></p>
-									<p><a href="#">Map</a></p>
+									<p><a href="#">Locations</a></p>
 									<p><a href="#">Schedule</a></p>
 									<p><a href="#">Survey</a></p>
 									<p><a href="#">contacts</a></p>

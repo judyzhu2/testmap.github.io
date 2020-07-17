@@ -1849,7 +1849,7 @@
 		border: 0;
 		cursor: pointer;
 		display: inline-block;
-		font-weight: 400;
+		font-weight: 700;
 		height: 2.85rem;
 		line-height: 2.95rem;
 		padding: 0 1.5rem;
@@ -1872,7 +1872,7 @@
 			input[type="button"].icon:before,
 			button.icon:before,
 			.button.icon:before {
-				margin-right: 0.5rem;
+				margin-right:0.5rem;
 			}
 
 		input[type="submit"].fit,
@@ -1943,7 +1943,9 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: white;
+			background-color: black;
+			opacity: 0.6;
+			color: white;
 		}
 
 		input[type="submit"]:active,

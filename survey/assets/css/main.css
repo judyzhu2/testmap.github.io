@@ -929,13 +929,13 @@
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: #70c7be;
-		border-radius: 4px;
+		background-color: #000;
+		border-radius: 1px;
 		border: 0;
 		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
-		font-weight: 400;
+		font-weight: 700;
 		height: 2.85em;
 		line-height: 2.95em;
 		padding: 0 1.5em;
@@ -949,7 +949,8 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #82cec6;
+			background-color: #26343E;
+
 		}
 
 		input[type="submit"]:active,
@@ -1151,7 +1152,10 @@
 		}
 
 /* Banner */
-
+#home{
+	background-color: #000;
+	opacity: 0.7;
+}
 	#banner {
 		-moz-align-items: center;
 		-webkit-align-items: center;
