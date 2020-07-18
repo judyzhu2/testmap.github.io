@@ -468,5 +468,10 @@ function initMap(){
       };
      })(marker,content));
         }
-
+	function openInfoWindow(props){
+    		locationInfowindow.setContent(props.content);
+   		locationInfowindow.setOptions({maxWidth:250, pixelOffset:new google.maps.Size(0, -40)});
+    		locationInfowindow.open(map);
+    		locationInfowindow.setPosition(props.coords);
+  };
 }
