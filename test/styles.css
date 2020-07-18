@@ -25,7 +25,7 @@ body {
 }
 
 .wrapper .search_box {
-  max-width: 1000px;
+  width: 100%;
   background: #29a5d8;
   margin: 0 auto;
   padding: 25px 0 50px;
@@ -52,7 +52,7 @@ body {
 }
 
 .table_wrap {
-  width: 1000px;
+  width: 100%;
   margin: 50px auto 0;
 }
 
