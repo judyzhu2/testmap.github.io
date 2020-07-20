@@ -13,5 +13,10 @@ search_input.addEventListener("keyup", function(e){
      item.closest("li").style.display = "none";
      }
  })
-
+});
+});
+var locationSearch = '';
+document.getElementById("0").addEventListener("click", function(){
+  var locationSearch = "0";
+  document.getElementById("0").innerHTML = locationSearch;
 });
