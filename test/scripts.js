@@ -14,7 +14,6 @@ search_input.addEventListener("keyup", function(e){
      }
  })
 });
-});
 var locationSearch = '';
 document.getElementById("0").addEventListener("click", function(){
   var locationSearch = "0";
