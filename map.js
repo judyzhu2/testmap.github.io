@@ -474,4 +474,6 @@ function initMap(){
     		locationInfowindow.open(map);
     		locationInfowindow.setPosition(props.coords);
   };
+if(locationSearch != ''){
+	openInfoWindow(markers[parseInt(locationSearch)];
 }
