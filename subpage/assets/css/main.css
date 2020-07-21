@@ -1659,6 +1659,8 @@
 
 	p {
 		margin: 0 0 2rem 0;
+		color: #566573;
+		font-weight:600px;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -1799,7 +1801,7 @@
 
 	.box {
 		margin-bottom: 2rem;
-		background: #FFF;
+		background: #AED6F1;
 	}
 
 		.box .content {
@@ -2870,7 +2872,7 @@
 			}
 
 		.wrapper.style2 {
-			background-color: #f2f2f2;
+			background-color: #85C1E9;
 			color: #a6a6a6;
 		}
 
