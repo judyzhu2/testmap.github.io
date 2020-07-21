@@ -916,7 +916,7 @@
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: #70c7be;
+		background-color: #17202A;
 		border-radius: 4px;
 		border: 0;
 		color: #ffffff !important;
@@ -929,6 +929,9 @@
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+	}
+	.button.button1{
+		color: #000;
 	}
 
 		input[type="submit"]:hover,
@@ -1004,6 +1007,8 @@
 			cursor: default;
 			opacity: 0.25;
 		}
+
+
 
 		input[type="submit"].style2,
 		input[type="reset"].style2,
@@ -1326,7 +1331,7 @@
 		padding: 4em 0 2em 0;
 	}
 
-	
+
 
 /* Footer */
 
