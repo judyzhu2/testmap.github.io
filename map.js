@@ -1,4 +1,4 @@
-import locationSearch from 'test/scripts.js';
+import { locationSearch } from 'test/scripts.js';
 function initMap(){
       // Map Settings
       var options = {
