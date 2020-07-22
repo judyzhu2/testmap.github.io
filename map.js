@@ -593,7 +593,7 @@ function initMap(){
     google.maps.event.addListener(marker,'click', (function(marker,content){
       return function() {
           locationInfowindow.setContent(content);
-          locationInfowindow.setOptions({maxWidth:250, pixelOffset:new google.maps.Size(0, 0)});
+          locationInfowindow.setOptions({maxWidth:400, pixelOffset:new google.maps.Size(0, 0)});
           locationInfowindow.open(map,marker);
       };
      })(marker,content));
