@@ -482,7 +482,7 @@ function initMap(){
         },
         {
           coords:{lat:30.446380,lng:-97.805956},
-          iconImage:sixtyMarker,aaaaaaaaaaaa
+          iconImage:sixtyMarker,
           content:
             '<div id="content">' +
             '<div id="siteNotice">' +
