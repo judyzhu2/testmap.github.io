@@ -173,7 +173,7 @@ function initMap(){
       }
       // New Map
       var map = new google.maps.Map(document.getElementById('map'), options);
-
+      //https://i.imgur.com/aRJGWIV.png
       // icons
       var zeroMarker = {
         url:'https://i.imgur.com/B9SCCwI.png',
@@ -220,8 +220,10 @@ function initMap(){
       //   infoWindow.open(map, marker);
       // });
 
+
+      //THESE COLORS ARE PLACEHOLDERS
       //Marker Array
-			var markers = [
+      var markers = [
         {
           coords:{lat:30.341720,lng:-97.967400},
           iconImage:zeroMarker,
@@ -376,9 +378,9 @@ function initMap(){
             '<h1 id="firstHeading" class="firstHeading">Austin Regional Clinic: ARC Southwest</h1>' +
             '<div id="bodyContent">' +
             "<p><b>Austin Regional Clinic: ARC Southwest</b> is located at <b>1807 W Slaughter Ln Suite 490, Austin, TX 78748 </b></p>" +
-            "<p>Appointment required, Must see provider before testing, Costs $201, Insurance not required.</p> <p>Drive Through: Monday through Friday 5PM-7PM, Saturday and Sunday 8AM to 5PM.</p>" +
+            "<p>Appointment required, Must see provider before testing, Costs $201, Insurance accepted.</p> <p>Drive Through: Monday through Friday 5PM-7PM, Saturday and Sunday 8AM to 5PM.</p>" +
             '<p>Website: <a href="https://mychart.austinregionalclinic.com/mychart/openscheduling"target="_blank">' +
-            "https://mychart.austinregionalclinic.com/mychart/openscheduling</a></p><p>Phone Number: <a href='tel:866453452'>(866) 453-452</a></p>" +
+            "https://ARCbooknow.com</a></p><p>Phone Number: <a href='tel:866453452'>(866) 453-4525</a></p>" +
             "</div>" +
             "</div>"
         },
@@ -410,7 +412,7 @@ function initMap(){
             "<p><b>Austin Regional Clinic: ARC South 1st</b> is located at <b>3828 S 1st St, Austin, TX 78704 </b></p>" +
             "<p>Appointment Necessary.</p> " +
             '<p>Website: <a href="https://mychart.austinregionalclinic.com/mychart/openscheduling"target="_blank">' +
-            "https://mychart.austinregionalclinic.com/mychart/openscheduling</a></p><p>Phone Number: <a href='tel:866453452'>(866) 453-452</a></p>" +
+            "https://ARCbooknow.com</a></p><p>Phone Number: <a href='tel:866453452'>(866) 453-4525</a></p>" +
             "</div>" +
             "</div>"
         },
@@ -427,6 +429,134 @@ function initMap(){
             "<p>No appointment, Must see provider before testing, Costs $119.</p><p>Walk-in, Tuesday and Wednesday 10AM - 5PM.</p> " +
             '<p>UPDATE Website: <a href="https://www.austintexas.gov/covid19"target="_blank">' +
             "https://www.austintexas.gov/covid19</a></p><p>Phone Number: <a href='tel:7377810391'>737-781-0391</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.276770,lng:-97.690334},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Austin Public Health Givens Park</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Austin Public Health Givens Park</b> is located at <b>3811 E. 12th Street, Austin, TX 78721 </b></p>" +
+            "<p>No appointment necessary, Walk-in.</p><p>Monday and Friday 9AM - 1PM,  Wednesday 3PM - 7 PM.</p> " +
+            '<p>Website: <a href="https://www.austintexas.gov/covid19"target="_blank">' +
+            "https://www.austintexas.gov/covid19</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.363126,lng:-97.698547},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Little Walnut Creek Library</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Little Walnut Creek Library</b> is located at <b>835 W Rundberg Ln, Austin, TX 78758 </b></p>" +
+            "<p>No appointment necessary, Walk-in.</p><p>Monday and Friday 9AM - 1PM,  Wednesday 3PM - 7 PM.</p> " +
+            '<p>Website: <a href="https://www.austintexas.gov/covid19"target="_blank">' +
+            "https://www.austintexas.gov/covid19</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.484718,lng:-97.689563},
+          iconImage:thirtyMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Austin Regional Clinic: ARC Round Rock</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Austin Regional Clinic: ARC Round Rock</b> is located at <b>940 Hesters Crossing Rd, Round Rock, TX 78681 </b></p>" +
+            "<p>Appointment required, Must see provider before testing, Costs $201, Insurance accepted.</p> <p>Drive Through: Monday through Friday 5PM-7PM, Saturday and Sunday 8AM to 5PM.</p>" +
+            '<p>Website: <a href="https://mychart.austinregionalclinic.com/mychart/openscheduling"target="_blank">' +
+            "https://ARCbooknow.com</a></p><p>Phone Number: <a href='tel:866453452'>(866) 453-4525</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.446380,lng:-97.805956},
+          iconImage:sixtyMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Austin Regional Clinic: ARC Anderson Mill</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Austin Regional Clinic: ARC Anderson Mill</b> is located at <b>10401 Anderson Mill Rd Suite 110B, Austin, TX 78750 </b></p>" +
+            "<p>Appointment required, Must see provider before testing, Costs $201, Insurance accepted.</p> <p>Drive Through: Monday through Friday 5PM-7PM, Saturday and Sunday 8AM to 5PM.</p>" +
+            '<p>Website: <a href="https://mychart.austinregionalclinic.com/mychart/openscheduling"target="_blank">' +
+            "https://ARCbooknow.com</a></p><p>Phone Number: <a href='tel:866453452'>(866) 453-4525</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.500733,lng:-97.584827},
+          iconImage:thirtyMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">St. David&apos;s CareNow Hutto</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>St. David's CareNow Hutto</b> is located at <b>4810 Gattis School Rd, Suite 100, Hutto, Texas 78664 </b></p>" +
+            "<p>Appointment not necessary, Must see provider before test, Walk-On.</p> <p>Monday through Friday 8AM - 8PM, Saturday 8AM - 7PM, Sunday 8AM - 5PM.</p>" +
+            '<p>Website: <a href="https://www.carenow.com/"target="_blank">' +
+            "https://www.carenow.com/</a></p><p>Phone Number: <a href='tel:5128618050'>(512) 861-8050</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.631584,lng:-97.688397},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">St. David&apos;s CareNow Georgetown</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>St. David's CareNow Georgetown</b> is located at <b>936 W University Ave, Georgetown, TX, 78626 </b></p>" +
+            "<p>Appointment not necessary, Must see provider before test, Walk-On.</p> <p>Monday through Friday 8AM - 8PM, Saturday 8AM - 7PM, Sunday 8AM - 5PM.</p>" +
+            '<p>Website: <a href="https://www.carenow.com/"target="_blank">' +
+            "https://www.carenow.com/</a></p><p>Phone Number: <a href='tel:5129422535'>(512) 942-2535</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.302918,lng:-97.739811},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Partners In Health/Roxana Rhodes M.D.</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Partners In Health/Roxana Rhodes M.D.</b> is located at <b>631 West 38th St. Suite #5, Austin, Texas 78705 </b></p>" +
+            "<p>Walk-On or Drive Through, Monday through Thursday 8AM - 4PM, Friday 8AM - 12PM.</p> " +
+            '<p>Website: <a href="https://partners-in-health.com"target="_blank">' +
+            "https://partners-in-health.com</a></p><p>Phone Number: <a href='tel:5124533542'>(512) 453-3542</a></p>" +
+            "</div>" +
+            "</div>"
+        },
+        {
+          coords:{lat:30.301011,lng:-97.699690},
+          iconImage:zeroMarker,
+          content:
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Austin Emergency Center Mueller</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Austin Emergency Center Mueller</b> is located at <b>1801 E. 51st St., Bldg. H, Austin, TX 78723 </b></p>" +
+            "<p>No appointment required, Must see provider before test, Costs $249, Insurance Accepted.</p><p>Walk-On or Drive Through, Everyday 8AM-12AM.</p> " +
+            '<p>Website: <a href="https://partners-in-health.com"target="_blank">' +
+            "https://partners-in-health.com</a></p><p>Phone Number: <a href='tel:5123225104'>(512) 322-5104</a></p>" +
             "</div>" +
             "</div>"
         },
@@ -452,7 +582,7 @@ function initMap(){
       // var infoWindowArray = []
       var locationInfowindow = new google.maps.InfoWindow();
       function addMarker(props){
-        var marker = new google.maps.Marker({
+        marker = new google.maps.Marker({
           position:props.coords,
           map:map,
           icon:props.iconImage
@@ -463,19 +593,17 @@ function initMap(){
     google.maps.event.addListener(marker,'click', (function(marker,content){
       return function() {
           locationInfowindow.setContent(content);
-	  locationInfowindow.setOptions({maxWidth:250});
+          locationInfowindow.setOptions({maxWidth:400, pixelOffset:new google.maps.Size(0, 0)});
           locationInfowindow.open(map,marker);
       };
      })(marker,content));
         }
-	function openInfoWindow(props){
-    		locationInfowindow.setContent(props.content);
-   		locationInfowindow.setOptions({maxWidth:250, pixelOffset:new google.maps.Size(0, -40)});
-    		locationInfowindow.open(map);
-    		locationInfowindow.setPosition(props.coords);
+  function openInfoWindow(props){
+    locationInfowindow.setContent(props.content);
+    locationInfowindow.setOptions({maxWidth:250, pixelOffset:new google.maps.Size(0, -40)});
+    locationInfowindow.open(map);
+    locationInfowindow.setPosition(props.coords);
   };
-// 	import { locationSearch } from './test/scripts.js';
-// 	if(locationSearch != ''){
-// 	openInfoWindow(markers[parseInt(locationSearch)]);
-// }
+
+
 }
