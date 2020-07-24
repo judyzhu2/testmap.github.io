@@ -842,7 +842,7 @@ color: #5499C7;
         7.  Discount-offer
 --------------------------------------*/
 .discount-offer {
-    padding: 120px 0;
+    padding: 20px 0;
     position: relative;
     background: url(../../assets/pics/schedule.jpg)no-repeat center fixed;
     background-size: cover;
@@ -861,7 +861,7 @@ color: #5499C7;
 
 .dicount-offer-content h2{
     color:#fff;
-    font-size:30px;
+    font-size:40px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     line-height: 1.4;
