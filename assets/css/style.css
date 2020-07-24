@@ -867,6 +867,14 @@ color: #5499C7;
     line-height: 1.4;
 }
 
+.dicount-offer-content p{
+  color:#fff;
+  font-size:20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
 /* campaign-timer */
 .campaign-timer{
     background: rgba(50,55,63,.65);
