@@ -2875,6 +2875,9 @@
 			background-color: #85C1E9;
 			color: #a6a6a6;
 		}
+		.homepage{
+			text-align: left;
+		}
 
 			.wrapper.style2 input, .wrapper.style2 select, .wrapper.style2 textarea {
 				color: #000;

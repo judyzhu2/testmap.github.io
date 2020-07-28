@@ -759,7 +759,32 @@ color: #5499C7;
     margin-top: 17px;
 }
 /* featured-header  */
+.color-code{
 
+  text-align: left;
+  margin-bottom: 5px;
+  display: block;
+
+}
+
+.color-code p{
+  color: black;
+  font-size: 15px;
+  font-family: inherit;
+
+}
+.color-code h2{
+  font-size: 17px;
+  font-style: italic;
+  font-family: inherit;
+}
+.color-code img{
+  margin-left: 15px;
+}
+
+.color-code img yellow{
+  margin-left: 100px;
+}
 
 /* ---- .item ---- */
 .filtr-container .filtr-item {
